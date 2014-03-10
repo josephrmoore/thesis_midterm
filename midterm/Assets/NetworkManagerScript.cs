@@ -7,6 +7,7 @@ public class NetworkManagerScript : MonoBehaviour {
 	public GameObject playerPrefab2;
 	public Transform spawnObjectServer;
 	public Transform spawnObjectClient;
+	public GameObject midi;
 	private float bX, bY, bW, bH;
 	private bool refreshing;
 	private HostData[] hostData;
@@ -25,7 +26,7 @@ public class NetworkManagerScript : MonoBehaviour {
 			if(MasterServer.PollHostList().Length > 0){
 				refreshing = false;
 				hostData = MasterServer.PollHostList();
-				Debug.Log (MasterServer.PollHostList().Length);
+//				Debug.Log (MasterServer.PollHostList().Length);
 			}
 		}
 //		if(Network.isClient){
@@ -53,9 +54,9 @@ public class NetworkManagerScript : MonoBehaviour {
 		}
 		if(player.networkView.isMine){ //check to make sure it’s out player being spawned
 			Camera[] c = player.GetComponentsInChildren<Camera>();
-			Debug.Log (c[0]);
+//			Debug.Log (c[0]);
 			c[0].tag = "MainCamera";
-			Debug.Log (c[0].tag);
+//			Debug.Log (c[0].tag);
 		
 		}
 
@@ -65,6 +66,7 @@ public class NetworkManagerScript : MonoBehaviour {
 	void OnServerInitialized(){
 		Debug.Log ("Server Initialized");
 		spawnPlayer (playerPrefab1, spawnObjectServer);
+//		Network.Instantiate (midi, new Vector3 (0, 0, 0), Quaternion.identity, 0);
 	}
 
 	void OnConnectedToServer(){

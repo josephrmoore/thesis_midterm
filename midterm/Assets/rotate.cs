@@ -8,7 +8,7 @@ public class rotate : MonoBehaviour {
 	private Vector3 speed = new Vector3();
 	private Vector3 avgSpeed = new Vector3();
 	private bool dragging = false;
-	private Vector3 targetSpeedX = new Vector3();
+	private bool rotating = false;
 	
 	void OnMouseOver() 
 	{
@@ -33,9 +33,20 @@ public class rotate : MonoBehaviour {
 			}
 			float i = Time.deltaTime * lerpSpeed;
 			speed = Vector3.Lerp( speed, Vector3.zero, i);
+//			Debug.Log (speed);
 		}
 		
-		transform.Rotate(Vector3.back, speed.y * rotationSpeed, Space.World);
+		transform.Rotate(Vector3.back, speed.x * rotationSpeed, Space.World);
+
+		if((int)(speed.x*127)*(int)rotationSpeed>0){
+			rotating = true;
+		} else {
+			rotating = false;
+		}
+		Debug.Log (rotating);
+		if(rotating == true){
+			MidiOut.SendPitchBend (0, 0, (int)(speed.x*127)*(int)rotationSpeed);
+		}
 	}
 }
 

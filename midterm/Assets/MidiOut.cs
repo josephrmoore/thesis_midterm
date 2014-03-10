@@ -46,4 +46,11 @@ public static class MidiOut
         value = Mathf.Clamp (127.0f * value, 0.0f, 127.0f);
         MidiBridge.instance.Send (0xb0 + cn, controlNumber, (int)value);
     }
+	public static void SendPitchBend(MidiChannel channel, int lsb, int msb)
+	{
+		int cn = Mathf.Clamp ((int)channel, 0, 15);
+		lsb = Mathf.Clamp (lsb, 0, 127);
+		msb = Mathf.Clamp (msb, 0, 127);
+		MidiBridge.instance.Send (0xE0 + cn, lsb, msb);
+	}
 }
