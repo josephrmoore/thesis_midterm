@@ -46,9 +46,44 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\MidiBridge.cs" />
+     <Compile Include="Assets\MidiInput.cs" />
+     <Compile Include="Assets\MidiOut.cs" />
      <Compile Include="Assets\NetworkManagerScript.cs" />
      <Compile Include="Assets\cam.cs" />
+     <Compile Include="Assets\click.cs" />
      <Compile Include="Assets\move.cs" />
+     <Compile Include="Assets\playnote.cs" />
+     <Compile Include="Assets\rotate.cs" />
+     <Compile Include="Assets\scripts\rhythm\bd1.cs" />
+     <Compile Include="Assets\scripts\rhythm\bd2.cs" />
+     <Compile Include="Assets\scripts\rhythm\bd3.cs" />
+     <Compile Include="Assets\scripts\rhythm\bd4.cs" />
+     <Compile Include="Assets\scripts\rhythm\hh1.cs" />
+     <Compile Include="Assets\scripts\rhythm\hh2.cs" />
+     <Compile Include="Assets\scripts\rhythm\hh3.cs" />
+     <Compile Include="Assets\scripts\rhythm\hh4.cs" />
+     <Compile Include="Assets\scripts\rhythm\sd1.cs" />
+     <Compile Include="Assets\scripts\rhythm\sd2.cs" />
+     <Compile Include="Assets\scripts\rhythm\sd3.cs" />
+     <Compile Include="Assets\scripts\rhythm\sd4.cs" />
+     <Compile Include="Assets\scripts\tones\bass1.cs" />
+     <Compile Include="Assets\scripts\tones\bass2.cs" />
+     <Compile Include="Assets\scripts\tones\bass3.cs" />
+     <Compile Include="Assets\scripts\tones\bass4.cs" />
+     <Compile Include="Assets\scripts\tones\guitar1.cs" />
+     <Compile Include="Assets\scripts\tones\guitar2.cs" />
+     <Compile Include="Assets\scripts\tones\guitar3.cs" />
+     <Compile Include="Assets\scripts\tones\guitar4.cs" />
+     <Compile Include="Assets\scripts\tones\horns1.cs" />
+     <Compile Include="Assets\scripts\tones\horns2.cs" />
+     <Compile Include="Assets\scripts\tones\horns3.cs" />
+     <Compile Include="Assets\scripts\tones\horns4.cs" />
+     <Compile Include="Assets\scripts\tones\loop_tones.cs" />
+     <Compile Include="Assets\scripts\tones\piano1.cs" />
+     <Compile Include="Assets\scripts\tones\piano2.cs" />
+     <Compile Include="Assets\scripts\tones\piano3.cs" />
+     <Compile Include="Assets\scripts\tones\piano4.cs" />
      <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
      <None Include="Assets\Standard Assets\Water (Basic)\Sources\Shaders\FX-Water Simple.shader" />
  <Reference Include="Library\ScriptAssemblies\Assembly-UnityScript-firstpass">
